@@ -3,25 +3,25 @@ const desktopMenu = document.querySelector('.desktop-menu');
 const menuBurgerIcon = document.querySelector('.menu');
 const mobileMenu =document.querySelector('.mobile-menu');
 const menuCarritoCompra = document.querySelector('.navbar-shopping-cart');
-const aside = document.querySelector('.product-detail');
+const shoppingCart = document.querySelector('#shoppingCart');
 const cardsContainer = document.querySelector('.cards-container');
 menuEmail.addEventListener('click', toggleDesktopMenu);
 menuBurgerIcon.addEventListener('click', toggleMobileMenu);
 menuCarritoCompra.addEventListener('click', toggleCarritoCompra);
 function toggleDesktopMenu() { 
     // quita o pone la clase inactive para que aparezca el desktop-menu
-    const isAsideClosed = aside.classList.contains('inactive');
-    if(!isAsideClosed){
-        aside.classList.add('inactive');
+    const isShoppingCartClosed = shoppingCart.classList.contains('inactive');
+    if(!isShoppingCartClosed){
+        shoppingCart.classList.add('inactive');
     }
    
     desktopMenu.classList.toggle('inactive');
 }
 
 function toggleMobileMenu(){
-    const isAsideClosed = aside.classList.contains('inactive');
-    if(!isAsideClosed){
-        aside.classList.add('inactive');
+    const isShoppingCartClosed = shoppingCart.classList.contains('inactive');
+    if(!isShoppingCartClosed){
+        shoppingCart.classList.add('inactive');
     }
     mobileMenu.classList.toggle('inactive');
 }
@@ -35,7 +35,7 @@ function toggleCarritoCompra(){
     if (!isDesktopMenuClosed){
         desktopMenu.classList.add('inactive');
     }
-      aside.classList.toggle('inactive');
+    shoppingCart.classList.toggle('inactive');
     
 }
 
@@ -56,11 +56,7 @@ listaProducto.push({
     price: 120,
     image:'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
 });
-listaProducto.push({
-    name: 'Bike',
-    price: 120,
-    image:'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-});
+
 
 function obtenerProducto(lista){
 
